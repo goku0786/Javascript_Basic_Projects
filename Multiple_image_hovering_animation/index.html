@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            position: relative;
+        }
+
+        .elem {
+            border-bottom: 2px solid white;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .elem>h1{
+            font-size: 8vh;
+            color: white;
+            position: relative;
+            z-index: 5;
+            mix-blend-mode: difference;
+        }
+
+        .elem>img{
+            height: 85px;
+            width: 85px;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0;
+            transition: all linear .1s;
+          
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="elem ">
+            <h1>Flower-1</h1>
+            <img src="https://images.pexels.com/photos/670741/pexels-photo-670741.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
+        </div>
+        <div class="elem">
+            <h1>Flower-2</h1>
+            <img src="https://images.pexels.com/photos/130574/pexels-photo-130574.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
+        </div>
+        <div class="elem">
+            <h1>Flower-3</h1>
+            <img src="https://images.pexels.com/photos/3686227/pexels-photo-3686227.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
+        </div>
+        <div class="elem">
+            <h1>Flower-4</h1>
+            <img src="https://images.pexels.com/photos/2720742/pexels-photo-2720742.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+  var elem = document.querySelectorAll('.elem')
+
+  elem.forEach(function(val){
+
+  val.addEventListener('mouseenter', function(){
+    val.childNodes[3].style.opacity = 1
+  });
+  val.addEventListener('mouseleave', function(){
+    val.childNodes[3].style.opacity = 0
+  });
+  val.addEventListener('mousemove', function(data){
+    val.childNodes[3].style.left = data.x + 'px'
+    // val.childNodes[3].style.top = data.y + 'px'
+  });
+
+  })
+
+</script>
+
+</html>

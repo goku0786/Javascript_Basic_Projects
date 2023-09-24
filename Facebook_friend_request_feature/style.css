@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+}
+
+.card{
+    height:250px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card>img{
+    height:40%;
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card>h1{
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.card>h5{
+    font-size: 20px;
+    margin: 5px 0px;
+    color: red;
+}
+
+.card>button{
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    height: 30px ;
+    width: 70px;
+    margin: 10px 2px;
+    cursor: pointer;
+}
+
+.add{
+    background-color:aqua;
+    color:rgb(255, 255, 255);
+}
